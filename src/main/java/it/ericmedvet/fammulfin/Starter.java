@@ -1,6 +1,6 @@
 package it.ericmedvet.fammulfin;
 
-import it.ericmedvet.fammulfin.resources.StatusResource;
+import it.ericmedvet.fammulfin.resource.StatusResource;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
