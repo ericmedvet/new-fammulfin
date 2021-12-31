@@ -15,7 +15,8 @@ public class Starter {
   public static final String BASE_URI = "http://localhost:8080/";
 
   public static void main(String[] args) throws IOException {
-    final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI),
+    final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(
+        URI.create(BASE_URI),
         new ResourceConfig().registerClasses(StatusResource.class)
     );
     server.start();
