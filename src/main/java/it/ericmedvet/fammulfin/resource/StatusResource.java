@@ -23,10 +23,4 @@ public class StatusResource {
     return new Status("Ok", new Date());
   }
 
-  @Path("/{name}")
-  @GET
-  public Response sayHello(@PathParam("name") String name) {
-    return Response.ok(String.format("Hello %s!", name)).build();
-  }
-
 }
