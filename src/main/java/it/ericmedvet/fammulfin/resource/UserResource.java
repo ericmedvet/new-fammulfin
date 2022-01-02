@@ -26,12 +26,8 @@ public class UserResource {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public List<User> all() {
-    try {
-      System.out.printf("Auth scheme is: %s%n", securityContext.getAuthenticationScheme());
-      System.out.printf("Current principal is: %s%n", securityContext.getUserPrincipal());
-    } catch (Throwable t) {
-      t.printStackTrace();
-    }
+    System.out.printf("Auth scheme is: %s%n", securityContext.getAuthenticationScheme());
+    System.out.printf("Current principal is: %s%n", securityContext.getUserPrincipal());
     return entityManager.createQuery("select u from User u", User.class).getResultList();
   }
 }
