@@ -16,14 +16,15 @@ public class User {
   private long id;
   private String firstName;
   private String lastName;
-  private String email;
+  private String email; // TODO should be unique
 
   public User() {
   }
 
-  public User(String firstName, String lastName) {
+  public User(String firstName, String lastName, String email) {
     this.firstName = firstName;
     this.lastName = lastName;
+    this.email = email;
   }
 
   public long getId() {

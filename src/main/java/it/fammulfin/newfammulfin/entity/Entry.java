@@ -25,14 +25,17 @@ public class Entry {
   @Column(precision = 10, scale = 2)
   private BigDecimal value;
   @ElementCollection
-  private Map<User, BigDecimal> payingUser;
+  private Map<User, BigDecimal> payingUser; // TODO: in rest, should be the user key or href
   @ElementCollection
-  private Map<User, BigDecimal> accountingUser;
+  private Map<User, BigDecimal> accountingUser; // TODO: in rest, should be the user key or href
   private String payee;
   private String description;
   private String note;
   @Convert(converter = StringSetConverter.class)
   private Set<String> tags;
+
+  public Entry() {
+  }
 
   public Entry(
       Group group,

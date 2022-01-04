@@ -21,8 +21,8 @@ public class BasicWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdap
     User.UserBuilder userBuilder = User.builder()
         .passwordEncoder(PasswordEncoderFactories.createDelegatingPasswordEncoder()::encode);
     return new InMemoryUserDetailsManager(
-        userBuilder.username("head").password("1234").roles("admin", "user").build(),
-        userBuilder.username("member").password("5678").roles("user").build()
+        userBuilder.username("alice@red.org").password("1234").roles("admin", "user").build(),
+        userBuilder.username("bob@red.org").password("5678").roles("user").build()
     );
   }
 

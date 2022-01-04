@@ -8,6 +8,7 @@ import java.util.Set;
  * @author "Eric Medvet" on 2022/01/04 for new-fammulfin
  */
 @Entity
+@Table(name="UsersGroup")
 public class Group {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,8 +22,10 @@ public class Group {
   public Group() {
   }
 
-  public Group(String name) {
+  public Group(String name, User owner, Set<User> members) {
     this.name = name;
+    this.owner = owner;
+    this.members = members;
   }
 
   public long getId() {
