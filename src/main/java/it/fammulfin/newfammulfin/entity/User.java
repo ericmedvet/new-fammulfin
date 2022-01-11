@@ -1,9 +1,6 @@
 package it.fammulfin.newfammulfin.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
@@ -16,6 +13,7 @@ public class User {
   private long id;
   private String firstName;
   private String lastName;
+  @Column(unique = true)
   private String email; // TODO should be unique
 
   public User() {
