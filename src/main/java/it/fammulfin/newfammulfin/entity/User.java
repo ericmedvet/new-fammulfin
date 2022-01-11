@@ -14,7 +14,7 @@ public class User {
   private String firstName;
   private String lastName;
   @Column(unique = true)
-  private String email; // TODO should be unique
+  private String email;
 
   public User() {
   }
