@@ -8,7 +8,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 /**
  * @author "Eric Medvet" on 2022/01/02 for new-fammulfin
  */
-@PreAuthorize("hasRole('admin')")
+@PreAuthorize("hasRole('admin')") // TODO see README.md
 public interface UserRepository extends JpaRepository<User, Long> {
 
   User findByEmail(@Param("email") String email);
